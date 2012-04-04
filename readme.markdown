@@ -4,7 +4,11 @@ Just playing with a simple HTML/JS acceleration app for the new Boot2Gecko Mozil
 
 ## Install
 
-* Install by navigating on phone to [http://accelo.evolvingbits.com/accelo](http://accelo.evolvingbits.com/accelo)
+* **I haven't yet been successful in making the web app installable via `navigator.mozApps.install` API** but you can still see the app work by browsing to: [http://accelo.evolvingbits.com/accelo](http://accelo.evolvingbits.com/accelo)
+
+## Caveats
+
+* The acceleration logic works fine on Boot2Gecko device but have noticed that the same code does the opposite movement on iOS. Haven't looked into yet.
 
 ## Acknowledgements
 
