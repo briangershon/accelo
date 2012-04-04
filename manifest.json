@@ -1,0 +1,19 @@
+{
+  "name": "Accelo",
+  "default_locale": "en-US",
+  "icons": {
+    "120": "/style/icons/Accelo.png"
+  },
+  "description": "Playing with Acceleration Events on Boot2Gecko",
+  "launch_path": "/",
+  "locales": {
+    "en-US": {
+      "name": "Accelo",
+      "description": "Playing with Acceleration Events on Boot2Gecko"
+    }
+  },
+  "developer": {
+    "url": "https://github.com/briangershon/accelo",
+    "name": "Brian Gershon"
+  }
+}

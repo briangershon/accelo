@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<style>
+  body {
+    background-color: #a01f00;
+  }
+
+  #logo {
+    width: 129px;
+    height: 82px;
+    border-radius: 10px;
+    -webkit-radius: 10px;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(/logo.png);
+  }
+</style>
+</head>
+
+<body>
+
+  <script>
+    var manifest_url = "http://my.webapp.com/manifest.json";
+  </script>
+
+  <button onclick="navigator.mozApps.install(manifest_url); return false;">
+    Install this awesome app on your homescreen!
+  </button>
+  
+  <div id="content">
+      <div id="logo"></div>
+  </div>
+
+<script>
+  var imageWidth = 129,
+    imageHeight = 82,
+    x = 0,
+    y = 0,
+    vx = 0,
+    vy = 0,
+    ax = 0,
+    ay = 0,
+    pause = 10,
+    vMultiplier = 0.03;
+
+  if (window.DeviceMotionEvent) {
+    window.ondevicemotion = function(event) {
+      ax = event.accelerationIncludingGravity.x;
+      ay = event.accelerationIncludingGravity.y;
+    }
+
+    setInterval(function() {
+      vy = vy + ay;
+      vx = vx - ax;
+
+      var logo = document.getElementById("logo");
+      y = parseInt(y + vy * vMultiplier);
+      x = parseInt(x + vx * vMultiplier);
+    
+      if (x < 0) { x = 0; vx = 0; }
+      if (y < 0) { y = 0; vy = 0; }
+      if (x > document.documentElement.clientWidth - imageWidth) { x = document.documentElement.clientWidth - imageWidth; vx = 0; }
+      if (y > document.documentElement.clientHeight - imageHeight) { y = document.documentElement.clientHeight - imageHeight; vy = 0; }
+    
+      logo.style.top = y + "px";
+      logo.style.left = x + "px";
+    }, pause);
+  } 
+</script>
+
+</body>
+</html>
