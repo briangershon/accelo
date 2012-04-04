@@ -2,10 +2,10 @@
   "name": "Accelo",
   "default_locale": "en-US",
   "icons": {
-    "120": "Accelo/style/icons/Accelo.png"
+    "120": "accelo/style/icons/Accelo.png"
   },
   "description": "Playing with Acceleration Events on Boot2Gecko",
-  "launch_path": "/Accelo",
+  "launch_path": "/accelo",
   "locales": {
     "en-US": {
       "name": "Accelo",

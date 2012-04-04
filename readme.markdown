@@ -4,7 +4,7 @@ Just playing with a simple HTML/JS acceleration app for the new Boot2Gecko Mozil
 
 ## Install
 
-* Install by navigating on phone to [http://accelo.evolvingbits.com](http://accelo.evolvingbits.com)
+* Install by navigating on phone to [http://accelo.evolvingbits.com/accelo](http://accelo.evolvingbits.com/accelo)
 
 ## Acknowledgements
 
